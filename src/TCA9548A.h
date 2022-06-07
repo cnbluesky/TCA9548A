@@ -28,13 +28,13 @@ class TCA9548A
         inline byte readRegister() { return (byte)read(); }
         void closeAll();
         void openAll();
-        
+        //add by guoxinghua 20220130
+        TwoWire* getWire();
     protected:
     private:
         TwoWire *myWire;
         uint8_t _address;
         uint8_t _channels;
-
         void write(uint8_t inData);
         uint8_t read();
 };

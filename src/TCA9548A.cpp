@@ -87,3 +87,7 @@ uint8_t TCA9548A::read()
     
     return buff;
 }
+
+TwoWire* TCA9548A::getWire(){
+    return this->myWire;
+}
